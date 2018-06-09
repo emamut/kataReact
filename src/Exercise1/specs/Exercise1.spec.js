@@ -16,11 +16,19 @@ describe('Exercise1', () => {
       expect(instance.state).toEqual({});
     });
 
-    fit('generate data array', () => {
+    it('generate data array', () => {
       const array = instance.generate_data_array();
+
       expect(array[0]).toEqual([1, 2, 3]);
       expect(array[1]).toEqual([4, 5, 6]);
       expect(array[2]).toEqual([7, 8, 9]);
+    });
+
+    it('get data array in spiral', () => {
+      const input = instance.generate_data_array();
+      const output = instance.get_data_array_spiral(input);
+
+      expect(output).toEqual([1, 2, 3, 6, 9, 8, 7, 4, 5]);
     });
   });
 });
