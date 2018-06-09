@@ -6,7 +6,7 @@ export class Exercise1 extends Component {
     this.state = {};
   }
 
-  generate_data_array = () => {
+  generateDataArray = () => {
     return [
       [1, 2, 3],
       [4, 5, 6],
@@ -14,47 +14,46 @@ export class Exercise1 extends Component {
     ];
   }
 
-  get_data_array_spiral = (data) => {
+  getDataArraySpiral = (data) => {
     let result = [];
     let size = data[0].length;
     let contx = 0;
     let conty = 0;
 
-    for(let cont = 0; cont <= (size * size); cont++) {
-      if(cont <= 2) {
+    for (let cont = 0; cont <= size * size; cont += 1) {
+      if (cont <= 2) {
         result.push(data[contx][conty]);
-        if(cont < 2)
-          conty++;
+        if (cont < 2) {
+          conty += 1;
+        }
       }
 
-      if(cont > 2 && cont < 5){
-        contx++;
-        result.push(data[contx][conty]);
-      }
-
-      if(cont > 5 && cont < 8) {
-        conty--;
+      if (cont > 2 && cont < 5) {
+        contx += 1;
         result.push(data[contx][conty]);
       }
 
-      if(cont == 8) {
-        contx--;
+      if (cont > 5 && cont < 8) {
+        conty -= 1;
         result.push(data[contx][conty]);
       }
-      if(cont == 9){
-        conty++;
+
+      if (cont === 8) {
+        contx -= 1;
+        result.push(data[contx][conty]);
+      }
+      if (cont === 9) {
+        conty += 1;
         result.push(data[contx][conty]);
       }
     }
-
-    console.log(result);
     return result;
   }
-  
+
   render() {
     return (
       <div className="container">
-        Exercise1 page
+    Exercise1 page
       </div>
     );
   }

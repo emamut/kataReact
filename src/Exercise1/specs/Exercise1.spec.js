@@ -17,7 +17,7 @@ describe('Exercise1', () => {
     });
 
     it('generate data array', () => {
-      const array = instance.generate_data_array();
+      const array = instance.generateDataArray();
 
       expect(array[0]).toEqual([1, 2, 3]);
       expect(array[1]).toEqual([4, 5, 6]);
@@ -25,8 +25,8 @@ describe('Exercise1', () => {
     });
 
     it('get data array in spiral', () => {
-      const input = instance.generate_data_array();
-      const output = instance.get_data_array_spiral(input);
+      const input = instance.generateDataArray();
+      const output = instance.getDataArraySpiral(input);
 
       expect(output).toEqual([1, 2, 3, 6, 9, 8, 7, 4, 5]);
     });
