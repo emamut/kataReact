@@ -5,6 +5,14 @@ export class Exercise1 extends Component {
     super(props);
     this.state = {};
   }
+
+  generate_data_array = () => {
+    return [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]
+    ]
+  }
   
   render() {
     return (

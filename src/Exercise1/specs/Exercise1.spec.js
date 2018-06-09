@@ -15,5 +15,12 @@ describe('Exercise1', () => {
     it('should defined state', () => {
       expect(instance.state).toEqual({});
     });
+
+    fit('generate data array', () => {
+      const array = instance.generate_data_array();
+      expect(array[0]).toEqual([1, 2, 3]);
+      expect(array[1]).toEqual([4, 5, 6]);
+      expect(array[2]).toEqual([7, 8, 9]);
+    });
   });
 });
