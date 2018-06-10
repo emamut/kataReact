@@ -51,9 +51,10 @@ export class Exercise1 extends Component {
   }
 
   render() {
+    let result = this.getDataArraySpiral(this.generateDataArray());
     return (
       <div className="container">
-    Exercise1 page
+        {result}
       </div>
     );
   }
